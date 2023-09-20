@@ -1,0 +1,188 @@
+
+<html><head><meta name='theme-color' content='#6A5ACD'><link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9G522DEZ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W9G522DEZ7');
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KVWTVKY5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0KVWTVKY5Z');
+</script></head><body><div style='position:fixed;bottom:-4px;right:-5px;z-index:3000'>
+<button onclick='window.location.href="back.php";' style='background-color:#31B0D5;color: white;padding: 5px 12px;border-radius: 4px;border-color: #46b8da;'>
+&lt;&lt;Back</button>
+</div><div id='rainbow-progress-bar'></div><script>window.onload = function(){document.getElementById('rainbow-progress-bar').style.display = 'none';}</script><style>
+@keyframes rainbow { 
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 200%; }
+  100% {background-position: 0% 100%; }
+}
+
+#rainbow-progress-bar {
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 900% 900%;
+
+  animation: rainbow 9s ease infinite;
+}
+</style><meta name='viewport' content='width=device-width, initial-scale=1.0'><link rel='stylesheet' href='css/style.css?33' type='text/css'><div class='adblock_top'></div><center><div class='logo2'>
+<div><a href='/index.php'><img src='/logo/imageedit_1_4567867331.png' width='350px'></a><hr width='50%'></div>  
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <center><table style='border:none;text-align:center;'><tr>
+   	<td>
+	<div class="dropdown" style='display:inline;'><button onclick='window.location.href="back.php";' class="dropbtn">&lt;&lt;Back</button></div>  
+	</td>
+    <td>
+	<div class="dropdown" style='display:inline;'><button onclick='window.location.href="sessionhistory.php";' class="dropbtn">Recently Browsed</button></div>
+	</td>
+	<td>
+		<div id="g_id_onload"
+			data-client_id="94440402827-3sflhu31itgep4c1g42miqbp0i1689se.apps.googleusercontent.com"
+			data-context="signin"
+			data-ux_mode="popup"
+			data-login_uri="common/googletokensignin.php"
+			data-auto_select="true"
+			data-itp_support="true">
+		</div>
+		<div class="g_id_signin" data-type="standard"></div>
+	</td>
+	</tr></table></center>
+	
+	<style>
+    .dropbtn {background-color: #4285F4;color: white;padding: 4px;padding-top:11px; padding-bottom:11px; font-size: 12px;border: none;cursor: pointer; border-radius: 8px;}
+    .dropbtn:hover, .dropbtn:focus {background-color: #2980B9;}
+    .dropdown {position: relative;display: inline-block;}
+    .dropdown-content {display: none;position: absolute;background-color: #f1f1f1;min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+    .dropdown-content a {color: black;padding: 12px 16px;text-decoration: none;display: block;}
+    .dropdown-content a:hover {background-color: #ddd}
+    .show {display:block;}
+    </style>   
+</div></center><br><div class='searchbox'><center><form id='searchbox' action='csearch.php' method='post'><fieldset><legend><b><u>Search for:</u></b></legend><input id='searchname' type='text' placeholder='' name='searchname' value=''>&nbsp;<input type='submit' name='Search' value='Search'><br><small><b><u><i>By:</i></u></b> <input id='searchby' type='radio' name='searchby' value='Name' checked>Movie Name &nbsp; <input id='searchby' type='radio' name='searchby' value='Director'>Director &nbsp; <input id='searchby' type='radio' name='searchby' value='Starcast'>Starcast </small><br><hr width='50%'><small><b><u><i>In:</i></u></b> <input id='category' type='radio' name='category' value='All' checked>All &nbsp; <input id='category' type='radio' name='category' value='Bollywood' >B'Wood &nbsp; <input id='category' type='radio' name='category' value='Hollywood' >H'Wood &nbsp; <input id='category' type='radio' name='category' value='DHollywood' >Dubbed </small><br><br><span style='text-align:left'><small><a href='advancedsearch.php'>(Advanced Search)</a></small></span>  <div class="speech" style='display:inline'>
+    <input type="hidden" name="vsearch" id="transcript"/>
+    <div id='micinform' style='float:right;text-align:left;font-size:10px;padding:5px;right:10px;background-color:#ADD8E6;display:none;'>Recording...</div>
+    <div id='beginvsearch' style='float:right;text-align:left;font-size:10px;padding:5px;right:10px;background-color:green;display:none;'>Searching Movies...</div>
+    <img style='float:right;' onclick="startDictation()" height=30px width=30px src="gmic.svg" />
+  </div>
+<!-- </form> -->
+
+<!-- HTML5 Speech Recognition API -->
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+      document.getElementById('micinform').style.display="inline";
+      setTimeout(function(){document.getElementById('micinform').style.display="none";}, 600);
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('micinform').style.display="none";
+        document.getElementById('beginvsearch').style.display="inline";
+        document.getElementById('searchbox').submit();
+      };
+
+      recognition.onerror = function(e) {
+        document.getElementById('micinform').style.display="inline";
+        recognition.stop();
+      }
+
+    }
+  }
+
+</script>
+
+</fieldset></form></center></div><center><a href='donate.php'>
+				<video width='90%' muted autoplay loop>
+				<source src='/donate/pre_freetrial_green.webm' type='video/webm' />
+				<source src='/donate/pre_freetrial_green.mp4' type='video/mp4' />
+				</video>
+				</a></center><br><div class='mainbox3'><small>Follow us on social media for latest updates<br><a href='https://t.me/fzgroup'><b>Telegram - </b><u><i>@FzGroup</i></u></a> | <a href='https://www.instagram.com/fzmovie/'><b>Instagram</b> - <u><i>@FzMovie</i></u></a> | <a href='https://twitter.com/fzgroup/'><b>Twitter</b> - <a href='https://twitter.com/FzGroup?ref_src=twsrc%5Etfw' class='twitter-follow-button' data-show-count='false'>@FzGroup</a><script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script></small></div><br><center><iframe src='//ad.responservbzh.icu/deliver/iframe/e47d4f41b466ba3' style='border:none;' scrolling='no' name='e47d4f41b466ba3' width='100%' height='90'></iframe></center><br><br><div class='mainbox3'><small>Watch the latest episodes of <a href='https://mobiletvshows.net/subfolder-Mr. Mercedes.html' target='_blank'>Mr. Mercedes</a> - <b><a href='http://www.mobiletvshows.net'>MobileTVshows - TV shows</a></b></small></div><br><div id='zone_1333734226' ></div>
+<script>
+    (function(w,d,o,g,r,a,m){
+        var cid='zone_1333734226';
+        w[r]=w[r]||function(){(w[r+'l']=w[r+'l']||[]).push(arguments)};
+        function e(b,w,r){if((w[r+'h']=b.pop())&&!w.ABN){
+            var a=d.createElement(o),p=d.getElementsByTagName(o)[0];a.async=1;
+            a.src='https://cdn.'+w[r+'h']+'/libs/e.js';a.onerror=function(){e(g,w,r)};
+            p.parentNode.insertBefore(a,p)}}e(g,w,r);
+        w[r](cid,{id:1333734226,domain:w[r+'h']});
+    })(window,document,'script',['ftd.agency'],'ABNS');
+</script>	<script src="wp.js?v=1"></script>
+	<br><div class='mainbox3' id='featurenotif' style='display:none'><small>
+	Chrome users, now you can get <font color=green>Instant Notifications</font> about the latest movies <div id='pushbutton' style='display:inline;'><button id="permission-btn" style='background-color: #4CAF50;border: none;color: white;padding: 7px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 12px;' onclick="pushsubscribe();return false;">Subscribe</button>
+	</small></div>
+
+	<div id='permissionstatus' style='display:none;'><font color=green><small>Successfully subscribed</small></font><br><small>For Mobile users : You will keep getting latest movie updates in your Notifications Drawer.</small></div>
+	</div>
+	<script>if(window.Notification.permission==='default') {document.getElementById('featurenotif').style.display='block';}</script>
+	    <script type='text/javascript'>
+	var app10 = localStorage.getItem('app10') || '';
+        if (app10 != 'yes') {
+         if (window.confirm('Download the Official Android App for FzMovies + FzTvSeries = FzStudios')) 
+{
+window.location.href='https://fzstudios.app/';
+};
+         localStorage.setItem('app10','yes');
+        }
+    </script><div><script data-cfasync='false' type='text/javascript' src='https://caunuscoagel.com/tJ3zQIMxLiO1/11128'></script></div><div class='footer'><small><a href='https://fzstudios.app/'>Android App</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href='donate.php'>FzMovies Pro</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+<a href='contact.php'>Contact Us</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href='downloading.php'>Downloading Help</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href='subtitles.php'>Subtitles</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href='mquality.php'>Quality Types</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href='support.php'>F.A.Q.</a></small></div><br><div id='zone_1835351944' ></div>
+<script>
+    (function(w,d,o,g,r,a,m){
+        var cid='zone_1835351944';
+        w[r]=w[r]||function(){(w[r+'l']=w[r+'l']||[]).push(arguments)};
+        function e(b,w,r){if((w[r+'h']=b.pop())&&!w.ABN){
+            var a=d.createElement(o),p=d.getElementsByTagName(o)[0];a.async=1;
+            a.src='https://cdn.'+w[r+'h']+'/libs/e.js';a.onerror=function(){e(g,w,r)};
+            p.parentNode.insertBefore(a,p)}}e(g,w,r);
+        w[r](cid,{id:1835351944,domain:w[r+'h']});
+    })(window,document,'script',['ftd.agency'],'ABNS');
+</script>
+<style>
+.inline {
+  display: inline;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: serif;
+}
+.link-button:focus {
+  outline: none;
+}
+.link-button:active {
+  color:red;
+}
+</style>
+
+<br><br>Your download keys have expired. Taking you back to the <a href='movie-Deadpool 2--hmp4.htm'>movie page</a> to restart things. <meta http-equiv='Refresh' content='2; url=movie-Deadpool 2--hmp4.htm'>
